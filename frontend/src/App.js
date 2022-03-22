@@ -9,6 +9,7 @@ import User from './pages/User'
 import UserHandle from './pages/UserHandle'
 import CreateProfile from "./components/CreateProfile";
 import Follow from "./components/Follow";
+import TestQuery from "./components/TestQuery";
 
 import LensHub from './artifacts/contracts/core/LensHub.sol/LensHub.json'
 
@@ -39,6 +40,7 @@ function App() {
       <h1>Iris</h1>
       {LensHubContract && <CreateProfile wallet={wallet} contract={LensHubContract}/>}
       {LensHubContract && <Follow wallet={wallet} contract={LensHubContract}/>}
+      {LensHubContract && <TestQuery />}
       <Routes>
         <Route path="/" element={<div>Welcome to Iris</div>} />
         <Route path="user" element={<User/>} >
